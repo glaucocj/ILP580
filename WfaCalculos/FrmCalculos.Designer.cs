@@ -1,7 +1,7 @@
 ﻿
-namespace wfaBemVindo
+namespace WfaCalculos
 {
-    partial class aula1
+    partial class Form1
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -29,18 +29,10 @@ namespace wfaBemVindo
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // aula1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "aula1";
-            this.Text = "Primeira Aula";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "Form1";
         }
 
         #endregion

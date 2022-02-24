@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace wfaBemVindo
+namespace WfaCalculos
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace wfaBemVindo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new aula1());
+            Application.Run(new FrmCalculos());
         }
     }
 }

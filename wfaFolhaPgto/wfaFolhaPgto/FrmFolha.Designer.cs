@@ -29,6 +29,7 @@ namespace wfaFolhaPgto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFolha));
             this.SuspendLayout();
             // 
             // FrmFolha
@@ -37,6 +38,7 @@ namespace wfaFolhaPgto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmFolha";
             this.Text = "Folha de Pagamento";
             this.ResumeLayout(false);

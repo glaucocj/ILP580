@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DDAFABA9-5E5D-4F2C-8A08-FC7BD946CFF7}</ProjectGuid>
+    <ProjectGuid>{E055C049-8AFD-4477-B0E7-966FAEE65B48}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WfaCalculos</RootNamespace>
-    <AssemblyName>WfaCalculos</AssemblyName>
+    <RootNamespace>wfaQuizMath</RootNamespace>
+    <AssemblyName>wfaQuizMath</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsValida.cs" />
-    <Compile Include="FrmCalculos.cs">
+    <Compile Include="frmQuizMath.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCalculos.Designer.cs">
-      <DependentUpon>FrmCalculos.cs</DependentUpon>
+    <Compile Include="frmQuizMath.Designer.cs">
+      <DependentUpon>frmQuizMath.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmCalculos.resx">
-      <DependentUpon>FrmCalculos.cs</DependentUpon>
+    <EmbeddedResource Include="frmQuizMath.resx">
+      <DependentUpon>frmQuizMath.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

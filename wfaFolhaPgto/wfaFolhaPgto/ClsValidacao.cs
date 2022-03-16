@@ -8,12 +8,17 @@ namespace wfaFolhaPgto
 {
     class ClsValidacao
     {
-        public static bool ConsisteLetras(Char entrada)
+        public static bool ConsisteLetras(Char entrada,Char ultimo)
         {
             if (Char.IsLetter(entrada) || 
                 entrada == (char)32 || entrada == (char) 46 ||
-                entrada == (char)8)
-                { return true; }
+                entrada == (char)8) {
+                if (ultimo != entrada || (ultimo != (char)32 && entrada !=(char)32))
+                {
+                    return true;
+                }
+                return false;
+            }
             else { return false; }
         }
 

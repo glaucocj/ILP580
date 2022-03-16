@@ -96,7 +96,47 @@ namespace wfaFolhaPgto
             txtHorTra.Text = "";
             txtNumDep.Text = "";
             txtVlrHor.Text = "";
+            lblHorTra.Text = "";
+            lblInss.Text = "";
+            lblIR.Text = "";
+            lblSalBruto.Text = "";
+            lblSalLiq.Text = "";
             txtNome.Focus();
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            Double.TryParse(txtHorTra.Text, out double hora);
+            Double.TryParse(txtVlrHor.Text, out double valor);
+            int.TryParse(txtNumDep.Text, out int dependentes);
+            double salBruto = hora * valor;
+                        
+            lblSalBruto.Text = salBruto.ToString();
+            lblInss.Text = (Taxas.CalculaINSS(salBruto)).ToString("###,###,##0.00");
+            lblIR.Text = (Taxas.CalculaIR(salBruto, dependentes)).ToString("###,###,##0.00");
+            lblSalLiq.Text = (salBruto-Taxas.CalculaINSS(salBruto)-Taxas.CalculaIR(salBruto,dependentes)).ToString("###,###,##0.00");
+        }
+
+        private void txtNumDep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+               btnCalcular_Click(sender, e);
+            }
+        }
+
+        private void FrmFolha_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja mesmo sair do sistema?", "P E R G U N T A",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -124,6 +124,7 @@ namespace wfaFolhaPgto
             this.txtNumDep.Name = "txtNumDep";
             this.txtNumDep.Size = new System.Drawing.Size(100, 20);
             this.txtNumDep.TabIndex = 4;
+            this.txtNumDep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDep_KeyPress);
             this.txtNumDep.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumDep_Validating);
             // 
             // pctImagem
@@ -144,6 +145,7 @@ namespace wfaFolhaPgto
             this.btnCalcular.TabIndex = 9;
             this.btnCalcular.Text = "&Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnLimpar
             // 
@@ -163,6 +165,7 @@ namespace wfaFolhaPgto
             this.btnSair.TabIndex = 11;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // pnlSaida
             // 
@@ -275,6 +278,7 @@ namespace wfaFolhaPgto
             this.MaximizeBox = false;
             this.Name = "FrmFolha";
             this.Text = "Folha de Pagamento";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFolha_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pctImagem)).EndInit();
             this.pnlSaida.ResumeLayout(false);
             this.pnlSaida.PerformLayout();

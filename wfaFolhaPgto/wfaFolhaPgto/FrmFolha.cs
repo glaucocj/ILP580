@@ -23,10 +23,12 @@ namespace wfaFolhaPgto
         {
             if (ClsValidacao.ConsisteLetras(e.KeyChar,ultimo_caractere) == false)
             {
-                MessageBox.Show("Entrada inválida","informação",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Entrada inválida","Informação",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 e.KeyChar = (char)0;
             }
-
+            else if (e.KeyChar == (char)13) { 
+                txtHorTra.Focus(); 
+            }
             else
             {
                 ultimo_caractere = e.KeyChar;
@@ -35,7 +37,7 @@ namespace wfaFolhaPgto
 
         private void txtHorTra_Validating(object sender, CancelEventArgs e)
         {
-            if (ClsValidacao.ConsisteNumInteiro(txtHorTra.Text) == false)
+            if (ClsValidacao.ConsisteNumReal(txtHorTra.Text) == false)
             {
                 MessageBox.Show("Entrada inválida", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 e.Cancel = true;
@@ -50,6 +52,51 @@ namespace wfaFolhaPgto
                 MessageBox.Show("Entrada inválida", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNome.Focus();
             }
+        }
+
+        private void txtVlrHor_Validating(object sender, CancelEventArgs e)
+        {
+            if (ClsValidacao.ConsisteNumReal(txtVlrHor.Text) == false)
+            {
+                MessageBox.Show("Entrada inválida", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.Cancel = true;
+                txtVlrHor.SelectAll();
+            }
+        }
+
+        private void txtNumDep_Validating(object sender, CancelEventArgs e)
+        {
+            if (ClsValidacao.ConsisteNumInteiro(txtNumDep.Text) == false)
+            {
+                MessageBox.Show("Entrada inválida", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.Cancel = true;
+                txtNumDep.SelectAll();
+            }
+        }
+
+        private void txtHorTra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                txtVlrHor.Focus();
+            }
+        }
+
+        private void txtVlrHor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                txtNumDep.Focus();
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.Text = "";
+            txtHorTra.Text = "";
+            txtNumDep.Text = "";
+            txtVlrHor.Text = "";
+            txtNome.Focus();
         }
     }
 }

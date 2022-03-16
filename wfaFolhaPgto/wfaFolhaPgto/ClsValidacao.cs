@@ -12,8 +12,10 @@ namespace wfaFolhaPgto
         {
             if (Char.IsLetter(entrada) || 
                 entrada == (char)32 || entrada == (char) 46 ||
-                entrada == (char)8) {
-                if (ultimo != entrada || (ultimo != (char)32 && entrada !=(char)32))
+                entrada == (char)8 || entrada ==(char)13) {
+                if (ultimo != entrada || 
+                    ((ultimo != (char)32 && entrada !=(char)32) && (ultimo != (char)46 && entrada != (char)46))
+                    )
                 {
                     return true;
                 }
@@ -31,12 +33,16 @@ namespace wfaFolhaPgto
         public static bool ConsisteNumReal(String entrada)
         {
             double numero;
-            return Double.TryParse(entrada, out numero);
+            Double.TryParse(entrada, out numero);
+            if (numero > 0)  return true;
+            else return false;
         }
         public static bool ConsisteNumInteiro(String entrada)
         {
             int numero;
-            return int.TryParse(entrada, out numero);
+            int.TryParse(entrada, out numero);
+            if (numero > 0) return true;
+            else return false;
         }
 
     }

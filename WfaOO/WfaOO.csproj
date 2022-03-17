@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conta.cs" />
+    <Compile Include="Conta_Comum.cs" />
+    <Compile Include="Conta_Especial.cs" />
     <Compile Include="FrmConta.cs">
       <SubType>Form</SubType>
     </Compile>

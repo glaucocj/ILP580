@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WfaOO
 {
-    class Conta
+    class Conta_Especial
     {
         public int Conta_Nro { get; set; }
 
@@ -20,22 +20,10 @@ namespace WfaOO
 
         public void Sacar(double valor)
         {
-            if(this.Conta_Tipo == 1)
-            {
-                if (this.Conta_Saldo < valor)
-                {
-                    throw new System.ArgumentException("Saldo Indisponível");
-                }
-                else
-                {
-                    this.Conta_Saldo -= valor;
-                }
-            }
-            else if (this.Conta_Saldo + this.Conta_Limite < valor)
+            if (this.Conta_Saldo +this.Conta_Limite < valor)
             {
                 throw new System.ArgumentException("Saldo Indisponível");
             }
-
             else
             {
                 double saldo_dif = this.Conta_Saldo + this.Conta_Limite;
@@ -49,7 +37,7 @@ namespace WfaOO
             }
         }
 
-    public void Depositar(double valor)
+        public void Depositar(double valor)
         {
             this.Conta_Saldo += valor;
         }

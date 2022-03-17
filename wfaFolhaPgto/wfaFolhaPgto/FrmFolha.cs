@@ -21,14 +21,20 @@ namespace wfaFolhaPgto
         #endregion
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (ClsValidacao.ConsisteLetras(e.KeyChar,ultimo_caractere) == false)
+
+
+            if (e.KeyChar == (char)13)
+            {
+                txtHorTra.Focus();
+            }
+
+            else if(ClsValidacao.ConsisteLetras(e.KeyChar,ultimo_caractere) == false)
             {
                 MessageBox.Show("Entrada inválida","Informação",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 e.KeyChar = (char)0;
             }
-            else if (e.KeyChar == (char)13) { 
-                txtHorTra.Focus(); 
-            }
+
+            
             else
             {
                 ultimo_caractere = e.KeyChar;
@@ -45,14 +51,6 @@ namespace wfaFolhaPgto
             }
         }
 
-        private void txtNome_Validating(object sender, CancelEventArgs e)
-        {
-            if (ClsValidacao.ConsisteNome(txtNome.Text) == false)
-            {
-                MessageBox.Show("Entrada inválida", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNome.Focus();
-            }
-        }
 
         private void txtVlrHor_Validating(object sender, CancelEventArgs e)
         {
@@ -106,15 +104,22 @@ namespace wfaFolhaPgto
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
+            if (ClsValidacao.ConsisteNome(txtNome.Text) == false) //Valida o nome para não permitir nome vazio
+            {
+                MessageBox.Show("Entrada inválida", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNome.Focus();
+            }
+
+
             Double.TryParse(txtHorTra.Text, out double hora);
             Double.TryParse(txtVlrHor.Text, out double valor);
             int.TryParse(txtNumDep.Text, out int dependentes);
             double salBruto = hora * valor;
                         
-            lblSalBruto.Text = salBruto.ToString();
-            lblInss.Text = (Taxas.CalculaINSS(salBruto)).ToString("###,###,##0.00");
-            lblIR.Text = (Taxas.CalculaIR(salBruto, dependentes)).ToString("###,###,##0.00");
-            lblSalLiq.Text = (salBruto-Taxas.CalculaINSS(salBruto)-Taxas.CalculaIR(salBruto,dependentes)).ToString("###,###,##0.00");
+            lblSalBruto.Text = salBruto.ToString("R$ ###,###,##0.00");
+            lblInss.Text = (Taxas.CalculaINSS(salBruto)).ToString("R$ ###,###,##0.00");
+            lblIR.Text = (Taxas.CalculaIR(salBruto, dependentes)).ToString("R$ ###,###,##0.00");
+            lblSalLiq.Text = (salBruto-Taxas.CalculaINSS(salBruto)-Taxas.CalculaIR(salBruto,dependentes)).ToString("R$ ###,###,##0.00");
         }
 
         private void txtNumDep_KeyPress(object sender, KeyPressEventArgs e)
@@ -138,5 +143,7 @@ namespace wfaFolhaPgto
         {
             Close();
         }
+
+
     }
 }

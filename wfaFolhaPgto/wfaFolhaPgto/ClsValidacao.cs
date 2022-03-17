@@ -41,7 +41,7 @@ namespace wfaFolhaPgto
         {
             int numero;
             int.TryParse(entrada, out numero);
-            if (numero > 0) return true;
+            if (numero >= 0) return true;
             else return false;
         }
 

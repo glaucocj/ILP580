@@ -58,71 +58,86 @@ namespace wfaFolhaPgto
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(34, 39);
+            this.lblNome.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(45, 30);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(108, 13);
+            this.lblNome.Size = new System.Drawing.Size(240, 29);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome do Funcionário";
             // 
             // lblHorTra
             // 
             this.lblHorTra.AutoSize = true;
-            this.lblHorTra.Location = new System.Drawing.Point(34, 88);
+            this.lblHorTra.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorTra.Location = new System.Drawing.Point(45, 91);
+            this.lblHorTra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHorTra.Name = "lblHorTra";
-            this.lblHorTra.Size = new System.Drawing.Size(97, 13);
+            this.lblHorTra.Size = new System.Drawing.Size(214, 29);
             this.lblHorTra.TabIndex = 1;
             this.lblHorTra.Text = "Horas Trabalhadas";
             // 
             // lblVlrHor
             // 
             this.lblVlrHor.AutoSize = true;
-            this.lblVlrHor.Location = new System.Drawing.Point(34, 133);
+            this.lblVlrHor.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVlrHor.Location = new System.Drawing.Point(45, 152);
+            this.lblVlrHor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVlrHor.Name = "lblVlrHor";
-            this.lblVlrHor.Size = new System.Drawing.Size(72, 13);
+            this.lblVlrHor.Size = new System.Drawing.Size(159, 29);
             this.lblVlrHor.TabIndex = 2;
             this.lblVlrHor.Text = "Valor da Hora";
             // 
             // lblNumDep
             // 
             this.lblNumDep.AutoSize = true;
-            this.lblNumDep.Location = new System.Drawing.Point(34, 173);
+            this.lblNumDep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumDep.Location = new System.Drawing.Point(45, 213);
+            this.lblNumDep.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumDep.Name = "lblNumDep";
-            this.lblNumDep.Size = new System.Drawing.Size(106, 13);
+            this.lblNumDep.Size = new System.Drawing.Size(231, 29);
             this.lblNumDep.TabIndex = 3;
             this.lblNumDep.Text = "Nro de Dependentes";
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(173, 36);
+            this.txtNome.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(310, 27);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(477, 20);
+            this.txtNome.Size = new System.Drawing.Size(635, 36);
             this.txtNome.TabIndex = 1;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
-            this.txtNome.Validating += new System.ComponentModel.CancelEventHandler(this.txtNome_Validating);
             // 
             // txtHorTra
             // 
-            this.txtHorTra.Location = new System.Drawing.Point(173, 81);
+            this.txtHorTra.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHorTra.Location = new System.Drawing.Point(310, 84);
+            this.txtHorTra.Margin = new System.Windows.Forms.Padding(4);
             this.txtHorTra.Name = "txtHorTra";
-            this.txtHorTra.Size = new System.Drawing.Size(100, 20);
+            this.txtHorTra.Size = new System.Drawing.Size(132, 36);
             this.txtHorTra.TabIndex = 2;
             this.txtHorTra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHorTra_KeyPress);
             this.txtHorTra.Validating += new System.ComponentModel.CancelEventHandler(this.txtHorTra_Validating);
             // 
             // txtVlrHor
             // 
-            this.txtVlrHor.Location = new System.Drawing.Point(173, 133);
+            this.txtVlrHor.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVlrHor.Location = new System.Drawing.Point(310, 145);
+            this.txtVlrHor.Margin = new System.Windows.Forms.Padding(4);
             this.txtVlrHor.Name = "txtVlrHor";
-            this.txtVlrHor.Size = new System.Drawing.Size(100, 20);
+            this.txtVlrHor.Size = new System.Drawing.Size(132, 36);
             this.txtVlrHor.TabIndex = 3;
             this.txtVlrHor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVlrHor_KeyPress);
             this.txtVlrHor.Validating += new System.ComponentModel.CancelEventHandler(this.txtVlrHor_Validating);
             // 
             // txtNumDep
             // 
-            this.txtNumDep.Location = new System.Drawing.Point(173, 174);
+            this.txtNumDep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumDep.Location = new System.Drawing.Point(310, 206);
+            this.txtNumDep.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumDep.Name = "txtNumDep";
-            this.txtNumDep.Size = new System.Drawing.Size(100, 20);
+            this.txtNumDep.Size = new System.Drawing.Size(132, 36);
             this.txtNumDep.TabIndex = 4;
             this.txtNumDep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDep_KeyPress);
             this.txtNumDep.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumDep_Validating);
@@ -130,18 +145,21 @@ namespace wfaFolhaPgto
             // pctImagem
             // 
             this.pctImagem.Image = ((System.Drawing.Image)(resources.GetObject("pctImagem.Image")));
-            this.pctImagem.Location = new System.Drawing.Point(322, 81);
+            this.pctImagem.Location = new System.Drawing.Point(667, 71);
+            this.pctImagem.Margin = new System.Windows.Forms.Padding(4);
             this.pctImagem.Name = "pctImagem";
-            this.pctImagem.Size = new System.Drawing.Size(167, 113);
+            this.pctImagem.Size = new System.Drawing.Size(261, 171);
             this.pctImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctImagem.TabIndex = 8;
             this.pctImagem.TabStop = false;
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(127, 214);
+            this.btnCalcular.Font = new System.Drawing.Font("Bahnschrift", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(241, 257);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.Size = new System.Drawing.Size(150, 50);
             this.btnCalcular.TabIndex = 9;
             this.btnCalcular.Text = "&Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -149,9 +167,11 @@ namespace wfaFolhaPgto
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(237, 214);
+            this.btnLimpar.Font = new System.Drawing.Font("Bahnschrift", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(450, 257);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.Size = new System.Drawing.Size(150, 50);
             this.btnLimpar.TabIndex = 10;
             this.btnLimpar.Text = "&Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
@@ -159,9 +179,11 @@ namespace wfaFolhaPgto
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(347, 214);
+            this.btnSair.Font = new System.Drawing.Font("Bahnschrift", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(677, 257);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.Size = new System.Drawing.Size(150, 50);
             this.btnSair.TabIndex = 11;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -170,48 +192,62 @@ namespace wfaFolhaPgto
             // pnlSaida
             // 
             this.pnlSaida.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlSaida.Controls.Add(this.lblSalLiq);
             this.pnlSaida.Controls.Add(this.label1);
+            this.pnlSaida.Controls.Add(this.lblIR);
             this.pnlSaida.Controls.Add(this.label4);
+            this.pnlSaida.Controls.Add(this.lblInss);
             this.pnlSaida.Controls.Add(this.label2);
+            this.pnlSaida.Controls.Add(this.lblSalBruto);
             this.pnlSaida.Controls.Add(this.label3);
-            this.pnlSaida.Location = new System.Drawing.Point(12, 256);
+            this.pnlSaida.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlSaida.Location = new System.Drawing.Point(16, 331);
+            this.pnlSaida.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSaida.Name = "pnlSaida";
-            this.pnlSaida.Size = new System.Drawing.Size(776, 173);
+            this.pnlSaida.Size = new System.Drawing.Size(1033, 196);
             this.pnlSaida.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 135);
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 153);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(175, 28);
             this.label1.TabIndex = 20;
             this.label1.Text = "Salário Líquido";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 29);
+            this.label4.Font = new System.Drawing.Font("Book Antiqua", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(36, 23);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(150, 28);
             this.label4.TabIndex = 17;
             this.label4.Text = "Salário Bruto";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 102);
+            this.label2.Font = new System.Drawing.Font("Book Antiqua", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 113);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(174, 28);
             this.label2.TabIndex = 19;
             this.label2.Text = "Imposto Renda";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 64);
+            this.label3.Font = new System.Drawing.Font("Book Antiqua", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 66);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(66, 28);
             this.label3.TabIndex = 18;
             this.label3.Text = "INSS";
             // 
@@ -219,47 +255,51 @@ namespace wfaFolhaPgto
             // 
             this.lblSalBruto.BackColor = System.Drawing.SystemColors.Control;
             this.lblSalBruto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblSalBruto.Location = new System.Drawing.Point(155, 287);
+            this.lblSalBruto.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalBruto.Location = new System.Drawing.Point(226, 22);
+            this.lblSalBruto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSalBruto.Name = "lblSalBruto";
-            this.lblSalBruto.Size = new System.Drawing.Size(108, 13);
+            this.lblSalBruto.Size = new System.Drawing.Size(150, 28);
             this.lblSalBruto.TabIndex = 13;
             // 
             // lblInss
             // 
             this.lblInss.BackColor = System.Drawing.SystemColors.Control;
             this.lblInss.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblInss.Location = new System.Drawing.Point(155, 322);
+            this.lblInss.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInss.Location = new System.Drawing.Point(226, 66);
+            this.lblInss.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInss.Name = "lblInss";
-            this.lblInss.Size = new System.Drawing.Size(108, 13);
+            this.lblInss.Size = new System.Drawing.Size(150, 28);
             this.lblInss.TabIndex = 14;
             // 
             // lblIR
             // 
             this.lblIR.BackColor = System.Drawing.SystemColors.Control;
             this.lblIR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblIR.Location = new System.Drawing.Point(155, 360);
+            this.lblIR.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIR.Location = new System.Drawing.Point(226, 112);
+            this.lblIR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIR.Name = "lblIR";
-            this.lblIR.Size = new System.Drawing.Size(108, 13);
+            this.lblIR.Size = new System.Drawing.Size(150, 28);
             this.lblIR.TabIndex = 15;
             // 
             // lblSalLiq
             // 
             this.lblSalLiq.BackColor = System.Drawing.SystemColors.Control;
             this.lblSalLiq.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblSalLiq.Location = new System.Drawing.Point(155, 392);
+            this.lblSalLiq.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalLiq.Location = new System.Drawing.Point(226, 152);
+            this.lblSalLiq.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSalLiq.Name = "lblSalLiq";
-            this.lblSalLiq.Size = new System.Drawing.Size(108, 13);
+            this.lblSalLiq.Size = new System.Drawing.Size(150, 28);
             this.lblSalLiq.TabIndex = 16;
             // 
             // FrmFolha
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblSalLiq);
-            this.Controls.Add(this.lblIR);
-            this.Controls.Add(this.lblInss);
-            this.Controls.Add(this.lblSalBruto);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCalcular);
@@ -275,6 +315,7 @@ namespace wfaFolhaPgto
             this.Controls.Add(this.pnlSaida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmFolha";
             this.Text = "Folha de Pagamento";

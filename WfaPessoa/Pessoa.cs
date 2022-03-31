@@ -10,5 +10,11 @@ namespace WfaPessoa
     {
         public string Nome { get; set; }
 
+        public static bool ValidaNome (string nome) {
+            return true;
     }
+
+    }
+
+
 }

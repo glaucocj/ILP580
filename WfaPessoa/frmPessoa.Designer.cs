@@ -50,9 +50,11 @@ namespace WfaPessoa
             // 
             this.grbPessoa.Controls.Add(this.rdbJuridica);
             this.grbPessoa.Controls.Add(this.rdbFisica);
+            this.grbPessoa.Font = new System.Drawing.Font("Verdana", 12F);
+            this.grbPessoa.ForeColor = System.Drawing.Color.SteelBlue;
             this.grbPessoa.Location = new System.Drawing.Point(12, 12);
             this.grbPessoa.Name = "grbPessoa";
-            this.grbPessoa.Size = new System.Drawing.Size(228, 134);
+            this.grbPessoa.Size = new System.Drawing.Size(251, 134);
             this.grbPessoa.TabIndex = 0;
             this.grbPessoa.TabStop = false;
             this.grbPessoa.Text = "Pessoa";
@@ -60,9 +62,9 @@ namespace WfaPessoa
             // rdbJuridica
             // 
             this.rdbJuridica.AutoSize = true;
-            this.rdbJuridica.Location = new System.Drawing.Point(40, 77);
+            this.rdbJuridica.Location = new System.Drawing.Point(6, 87);
             this.rdbJuridica.Name = "rdbJuridica";
-            this.rdbJuridica.Size = new System.Drawing.Size(129, 21);
+            this.rdbJuridica.Size = new System.Drawing.Size(185, 29);
             this.rdbJuridica.TabIndex = 2;
             this.rdbJuridica.TabStop = true;
             this.rdbJuridica.Text = "Pessoa Juridica";
@@ -72,9 +74,9 @@ namespace WfaPessoa
             // rdbFisica
             // 
             this.rdbFisica.AutoSize = true;
-            this.rdbFisica.Location = new System.Drawing.Point(40, 35);
+            this.rdbFisica.Location = new System.Drawing.Point(6, 42);
             this.rdbFisica.Name = "rdbFisica";
-            this.rdbFisica.Size = new System.Drawing.Size(116, 21);
+            this.rdbFisica.Size = new System.Drawing.Size(164, 29);
             this.rdbFisica.TabIndex = 1;
             this.rdbFisica.TabStop = true;
             this.rdbFisica.Text = "Pessoa Física";
@@ -83,110 +85,136 @@ namespace WfaPessoa
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(396, 101);
+            this.txtNome.Font = new System.Drawing.Font("Verdana", 14F);
+            this.txtNome.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtNome.Location = new System.Drawing.Point(272, 67);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 22);
-            this.txtNome.TabIndex = 2;
+            this.txtNome.Size = new System.Drawing.Size(435, 36);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
+            this.txtNome.Validated += new System.EventHandler(this.txtNome_Validated);
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(393, 62);
+            this.lblNome.Font = new System.Drawing.Font("Verdana", 14F);
+            this.lblNome.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblNome.Location = new System.Drawing.Point(269, 25);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(45, 17);
+            this.lblNome.Size = new System.Drawing.Size(83, 29);
             this.lblNome.TabIndex = 3;
             this.lblNome.Text = "Nome";
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.AutoSize = true;
-            this.btnCadastrar.Location = new System.Drawing.Point(155, 265);
+            this.btnCadastrar.Enabled = false;
+            this.btnCadastrar.Font = new System.Drawing.Font("Verdana", 14F);
+            this.btnCadastrar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnCadastrar.Location = new System.Drawing.Point(65, 250);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(80, 27);
-            this.btnCadastrar.TabIndex = 4;
+            this.btnCadastrar.Size = new System.Drawing.Size(140, 40);
+            this.btnCadastrar.TabIndex = 3;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // mtbPessoa
             // 
-            this.mtbPessoa.Location = new System.Drawing.Point(396, 180);
+            this.mtbPessoa.Font = new System.Drawing.Font("Verdana", 14F);
+            this.mtbPessoa.ForeColor = System.Drawing.Color.SteelBlue;
+            this.mtbPessoa.Location = new System.Drawing.Point(272, 161);
             this.mtbPessoa.Mask = "99,999,999/9999-99";
             this.mtbPessoa.Name = "mtbPessoa";
-            this.mtbPessoa.Size = new System.Drawing.Size(161, 22);
-            this.mtbPessoa.TabIndex = 5;
+            this.mtbPessoa.Size = new System.Drawing.Size(435, 36);
+            this.mtbPessoa.TabIndex = 2;
             this.mtbPessoa.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbPessoa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbPessoa_KeyPress);
             this.mtbPessoa.Validating += new System.ComponentModel.CancelEventHandler(this.mtbPessoa_Validating);
             // 
             // lblPessoa
             // 
             this.lblPessoa.AutoSize = true;
-            this.lblPessoa.Location = new System.Drawing.Point(393, 140);
+            this.lblPessoa.Font = new System.Drawing.Font("Verdana", 14F);
+            this.lblPessoa.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblPessoa.Location = new System.Drawing.Point(269, 117);
             this.lblPessoa.Name = "lblPessoa";
-            this.lblPessoa.Size = new System.Drawing.Size(34, 17);
+            this.lblPessoa.Size = new System.Drawing.Size(58, 29);
             this.lblPessoa.TabIndex = 6;
             this.lblPessoa.Text = "CPF";
             // 
             // btnSair
             // 
-            this.btnSair.AutoSize = true;
-            this.btnSair.Location = new System.Drawing.Point(532, 265);
+            this.btnSair.Font = new System.Drawing.Font("Verdana", 14F);
+            this.btnSair.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnSair.Location = new System.Drawing.Point(566, 250);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(80, 27);
-            this.btnSair.TabIndex = 7;
+            this.btnSair.Size = new System.Drawing.Size(140, 40);
+            this.btnSair.TabIndex = 6;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnLimpar
             // 
-            this.btnLimpar.AutoSize = true;
-            this.btnLimpar.Location = new System.Drawing.Point(396, 265);
+            this.btnLimpar.Font = new System.Drawing.Font("Verdana", 14F);
+            this.btnLimpar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnLimpar.Location = new System.Drawing.Point(399, 250);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(80, 27);
-            this.btnLimpar.TabIndex = 8;
+            this.btnLimpar.Size = new System.Drawing.Size(140, 40);
+            this.btnLimpar.TabIndex = 5;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnExibir
             // 
-            this.btnExibir.AutoSize = true;
-            this.btnExibir.Location = new System.Drawing.Point(272, 265);
+            this.btnExibir.Enabled = false;
+            this.btnExibir.Font = new System.Drawing.Font("Verdana", 14F);
+            this.btnExibir.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnExibir.Location = new System.Drawing.Point(232, 250);
             this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(80, 27);
-            this.btnExibir.TabIndex = 9;
+            this.btnExibir.Size = new System.Drawing.Size(140, 40);
+            this.btnExibir.TabIndex = 4;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = true;
+            this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
             // 
             // lblInfo1
             // 
             this.lblInfo1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblInfo1.Location = new System.Drawing.Point(103, 333);
+            this.lblInfo1.Font = new System.Drawing.Font("Verdana", 14F);
+            this.lblInfo1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInfo1.Location = new System.Drawing.Point(64, 333);
             this.lblInfo1.Name = "lblInfo1";
-            this.lblInfo1.Size = new System.Drawing.Size(200, 17);
+            this.lblInfo1.Size = new System.Drawing.Size(643, 40);
             this.lblInfo1.TabIndex = 10;
             // 
             // lblInfo2
             // 
             this.lblInfo2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblInfo2.Location = new System.Drawing.Point(103, 374);
+            this.lblInfo2.Font = new System.Drawing.Font("Verdana", 14F);
+            this.lblInfo2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInfo2.Location = new System.Drawing.Point(64, 387);
             this.lblInfo2.Name = "lblInfo2";
-            this.lblInfo2.Size = new System.Drawing.Size(200, 17);
+            this.lblInfo2.Size = new System.Drawing.Size(643, 40);
             this.lblInfo2.TabIndex = 11;
             // 
             // lblInfo3
             // 
             this.lblInfo3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblInfo3.Location = new System.Drawing.Point(103, 424);
+            this.lblInfo3.Font = new System.Drawing.Font("Verdana", 14F);
+            this.lblInfo3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInfo3.Location = new System.Drawing.Point(64, 441);
             this.lblInfo3.Name = "lblInfo3";
-            this.lblInfo3.Size = new System.Drawing.Size(200, 17);
+            this.lblInfo3.Size = new System.Drawing.Size(643, 40);
             this.lblInfo3.TabIndex = 12;
             // 
             // frmPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 507);
             this.Controls.Add(this.lblInfo3);
             this.Controls.Add(this.lblInfo2);
             this.Controls.Add(this.lblInfo1);

@@ -13,6 +13,7 @@ namespace WfaPessoa
         public static bool ValidaCPF (string numero) 
         {
             if (numero == "") { return true; }
+            if (numero.Length < 11) { return false; }
             int tamanho = numero.Length - 2;
             int soma = 0;
             int fator = 10;

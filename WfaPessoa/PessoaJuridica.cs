@@ -13,6 +13,7 @@ namespace WfaPessoa
         public static bool ValidaCNPJ (string numero)
         {
             if (numero == "") { return true; }
+            if (numero.Length < 14) { return false; }
             int tamanho = numero.Length-2;
             int soma = 0;
             int fator = 5;

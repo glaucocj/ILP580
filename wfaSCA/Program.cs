@@ -16,7 +16,7 @@ namespace wfaSCA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMDISCA());
+            Application.Run(new Form1());
         }
     }
 }

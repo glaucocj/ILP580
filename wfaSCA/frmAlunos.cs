@@ -20,9 +20,7 @@ namespace wfaSCA
         private void frmAlunos_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'scaAlunosDataSet.alunos'. Você pode movê-la ou removê-la conforme necessário.
-            this.alunosTableAdapter1.Fill(this.scaAlunosDataSet.alunos);
             // TODO: esta linha de código carrega dados na tabela 'alunosDataSet.alunos'. Você pode movê-la ou removê-la conforme necessário.
-            this.alunosTableAdapter.Fill(this.alunosDataSet.alunos);
             if (txtSexo.Text == "F") { rdbFeminino.Checked = true; }
             else if (txtSexo.Text == "M") { rdbMasculino.Checked = true; }
             else { rdbOutro.Checked = true; }
@@ -32,7 +30,6 @@ namespace wfaSCA
         {
             this.Validate();
             this.alunosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.alunosDataSet);
         }
 
         private void rdbFeminino_CheckedChanged(object sender, EventArgs e)

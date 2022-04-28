@@ -95,7 +95,7 @@ namespace wfaSCA
         private void alunosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form objAlunos = new frmAlunos();
-            objAlunos.Show();
+            objAlunos.ShowDialog();
         }
 
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
@@ -103,5 +103,7 @@ namespace wfaSCA
             this.Close();
         }
         #endregion
+
+
     }
 }

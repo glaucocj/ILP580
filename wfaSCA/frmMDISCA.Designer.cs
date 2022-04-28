@@ -114,32 +114,32 @@ namespace wfaSCA
             // alunosToolStripMenuItem
             // 
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
-            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.alunosToolStripMenuItem.Text = "Alunos";
             this.alunosToolStripMenuItem.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
             // 
             // disciplinasToolStripMenuItem
             // 
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
-            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.disciplinasToolStripMenuItem.Text = "Disciplinas";
             // 
             // cursosToolStripMenuItem
             // 
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.cursosToolStripMenuItem.Text = "Cursos";
             // 
             // departamentosToolStripMenuItem
             // 
             this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
-            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.departamentosToolStripMenuItem.Text = "Departamentos";
             // 
             // estadosToolStripMenuItem
             // 
             this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
-            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.estadosToolStripMenuItem.Text = "Estados";
             // 
             // secretariaToolStripMenuItem
@@ -154,13 +154,13 @@ namespace wfaSCA
             // matrículaToolStripMenuItem
             // 
             this.matrículaToolStripMenuItem.Name = "matrículaToolStripMenuItem";
-            this.matrículaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.matrículaToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.matrículaToolStripMenuItem.Text = "Matrícula";
             // 
             // históricoToolStripMenuItem
             // 
             this.históricoToolStripMenuItem.Name = "históricoToolStripMenuItem";
-            this.históricoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.históricoToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.históricoToolStripMenuItem.Text = "Histórico";
             // 
             // docenteToolStripMenuItem
@@ -174,7 +174,7 @@ namespace wfaSCA
             // notasToolStripMenuItem
             // 
             this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.notasToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.notasToolStripMenuItem.Text = "Notas";
             // 
             // helpMenu
@@ -341,6 +341,7 @@ namespace wfaSCA
             this.Name = "frmMDISCA";
             this.Text = "Sistema de Controle Acadêmico";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);

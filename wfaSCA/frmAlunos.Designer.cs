@@ -33,7 +33,6 @@ namespace wfaSCA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlunos));
             this.label1 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
-            this.alunosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rdbFeminino = new System.Windows.Forms.RadioButton();
             this.cmbUF = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -41,7 +40,6 @@ namespace wfaSCA
             this.rdbOutro = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.alunosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -64,27 +62,51 @@ namespace wfaSCA
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.txtSexo = new System.Windows.Forms.TextBox();
+            this.alunosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtSexo = new System.Windows.Forms.TextBox();
-            this.alunosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).BeginInit();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.alunosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.alunosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alunosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alunov1DataSet = new wfaSCA.alunov1DataSet();
+            this.alunosTableAdapter = new wfaSCA.alunov1DataSetTableAdapters.alunosTableAdapter();
+            this.tableAdapterManager = new wfaSCA.alunov1DataSetTableAdapters.TableAdapterManager();
+            this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cursosTableAdapter = new wfaSCA.alunov1DataSetTableAdapters.cursosTableAdapter();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource2)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingNavigator)).BeginInit();
+            this.alunosBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunov1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,6 +122,7 @@ namespace wfaSCA
             // 
             // txtMatricula
             // 
+            this.txtMatricula.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alunosBindingSource, "alu_mat", true));
             this.txtMatricula.Font = new System.Drawing.Font("Verdana", 10F);
             this.txtMatricula.ForeColor = System.Drawing.Color.MediumBlue;
             this.txtMatricula.Location = new System.Drawing.Point(16, 76);
@@ -212,7 +235,7 @@ namespace wfaSCA
             // 
             // txtNome
             // 
-            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alunosBindingSource2, "alu_nom", true));
+            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alunosBindingSource, "alu_nom", true));
             this.txtNome.Font = new System.Drawing.Font("Verdana", 10F);
             this.txtNome.ForeColor = System.Drawing.Color.MediumBlue;
             this.txtNome.Location = new System.Drawing.Point(165, 76);
@@ -220,12 +243,9 @@ namespace wfaSCA
             this.txtNome.Size = new System.Drawing.Size(455, 28);
             this.txtNome.TabIndex = 6;
             // 
-            // alunosBindingSource2
-            // 
-            this.alunosBindingSource2.DataMember = "alunos";
-            // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alunosBindingSource, "alu_dta_nas", true));
             this.textBox3.Font = new System.Drawing.Font("Verdana", 10F);
             this.textBox3.ForeColor = System.Drawing.Color.MediumBlue;
             this.textBox3.Location = new System.Drawing.Point(192, 160);
@@ -240,15 +260,16 @@ namespace wfaSCA
             this.label3.ForeColor = System.Drawing.Color.MediumBlue;
             this.label3.Location = new System.Drawing.Point(188, 126);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 20);
+            this.label3.Size = new System.Drawing.Size(183, 20);
             this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
+            this.label3.Text = "Data de Nascimento";
             // 
             // textBox4
             // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alunosBindingSource, "alu_cur_sgl", true));
             this.textBox4.Font = new System.Drawing.Font("Verdana", 10F);
             this.textBox4.ForeColor = System.Drawing.Color.MediumBlue;
-            this.textBox4.Location = new System.Drawing.Point(335, 160);
+            this.textBox4.Location = new System.Drawing.Point(381, 160);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 28);
             this.textBox4.TabIndex = 10;
@@ -258,17 +279,18 @@ namespace wfaSCA
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 10F);
             this.label4.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label4.Location = new System.Drawing.Point(331, 126);
+            this.label4.Location = new System.Drawing.Point(377, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 20);
+            this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.label4.Text = "Curso";
             // 
             // textBox5
             // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alunosBindingSource, "alu_ing", true));
             this.textBox5.Font = new System.Drawing.Font("Verdana", 10F);
             this.textBox5.ForeColor = System.Drawing.Color.MediumBlue;
-            this.textBox5.Location = new System.Drawing.Point(486, 160);
+            this.textBox5.Location = new System.Drawing.Point(529, 160);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 28);
             this.textBox5.TabIndex = 12;
@@ -278,11 +300,11 @@ namespace wfaSCA
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 10F);
             this.label5.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label5.Location = new System.Drawing.Point(482, 126);
+            this.label5.Location = new System.Drawing.Point(525, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 20);
+            this.label5.Size = new System.Drawing.Size(84, 20);
             this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            this.label5.Text = "Ingresso";
             // 
             // groupBox2
             // 
@@ -462,14 +484,26 @@ namespace wfaSCA
             this.label7.TabIndex = 15;
             this.label7.Text = "label7";
             // 
-            // bindingNavigator1
+            // txtSexo
             // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.alunosBindingSource;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtSexo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alunosBindingSource, "alu_sexo", true));
+            this.txtSexo.Enabled = false;
+            this.txtSexo.Font = new System.Drawing.Font("Verdana", 10F);
+            this.txtSexo.ForeColor = System.Drawing.Color.MediumBlue;
+            this.txtSexo.Location = new System.Drawing.Point(192, 247);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(100, 28);
+            this.txtSexo.TabIndex = 15;
+            this.txtSexo.TextChanged += new System.EventHandler(this.txtSexo_TextChanged);
+            // 
+            // alunosBindingNavigator
+            // 
+            this.alunosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.alunosBindingNavigator.BindingSource = this.alunosBindingSource;
+            this.alunosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.alunosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.alunosBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.alunosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -480,42 +514,18 @@ namespace wfaSCA
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(888, 27);
-            this.bindingNavigator1.TabIndex = 13;
-            this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorDeleteItem,
+            this.alunosBindingNavigatorSaveItem});
+            this.alunosBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.alunosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.alunosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.alunosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.alunosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.alunosBindingNavigator.Name = "alunosBindingNavigator";
+            this.alunosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.alunosBindingNavigator.Size = new System.Drawing.Size(1187, 31);
+            this.alunosBindingNavigator.TabIndex = 16;
+            this.alunosBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -523,7 +533,7 @@ namespace wfaSCA
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
             // 
             // bindingNavigatorMovePreviousItem
@@ -532,13 +542,13 @@ namespace wfaSCA
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -549,10 +559,17 @@ namespace wfaSCA
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 28);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -560,7 +577,7 @@ namespace wfaSCA
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
             // 
             // bindingNavigatorMoveLastItem
@@ -569,36 +586,240 @@ namespace wfaSCA
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
-            // txtSexo
+            // bindingNavigatorAddNewItem
             // 
-            this.txtSexo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alunosBindingSource3, "alu_sexo", true));
-            this.txtSexo.Font = new System.Drawing.Font("Verdana", 10F);
-            this.txtSexo.ForeColor = System.Drawing.Color.MediumBlue;
-            this.txtSexo.Location = new System.Drawing.Point(192, 247);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(100, 28);
-            this.txtSexo.TabIndex = 15;
-            this.txtSexo.TextChanged += new System.EventHandler(this.txtSexo_TextChanged);
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
             // 
-            // alunosBindingSource3
+            // bindingNavigatorDeleteItem
             // 
-            this.alunosBindingSource3.DataMember = "alunos";
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            // 
+            // alunosBindingNavigatorSaveItem
+            // 
+            this.alunosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.alunosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("alunosBindingNavigatorSaveItem.Image")));
+            this.alunosBindingNavigatorSaveItem.Name = "alunosBindingNavigatorSaveItem";
+            this.alunosBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
+            this.alunosBindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.alunosBindingNavigatorSaveItem.Click += new System.EventHandler(this.alunosBindingNavigatorSaveItem_Click);
+            // 
+            // alunosDataGridView
+            // 
+            this.alunosDataGridView.AutoGenerateColumns = false;
+            this.alunosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.alunosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32});
+            this.alunosDataGridView.DataSource = this.alunosBindingSource;
+            this.alunosDataGridView.Location = new System.Drawing.Point(678, 32);
+            this.alunosDataGridView.Name = "alunosDataGridView";
+            this.alunosDataGridView.RowHeadersWidth = 51;
+            this.alunosDataGridView.RowTemplate.Height = 24;
+            this.alunosDataGridView.Size = new System.Drawing.Size(483, 220);
+            this.alunosDataGridView.TabIndex = 16;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "alu_mat";
+            this.dataGridViewTextBoxColumn17.HeaderText = "alu_mat";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "alu_nom";
+            this.dataGridViewTextBoxColumn18.HeaderText = "alu_nom";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "alu_ing";
+            this.dataGridViewTextBoxColumn19.HeaderText = "alu_ing";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "alu_dta_nas";
+            this.dataGridViewTextBoxColumn20.HeaderText = "alu_dta_nas";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "alu_CPF";
+            this.dataGridViewTextBoxColumn21.HeaderText = "alu_CPF";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "alu_sexo";
+            this.dataGridViewTextBoxColumn22.HeaderText = "alu_sexo";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "alu_email";
+            this.dataGridViewTextBoxColumn23.HeaderText = "alu_email";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "alu_end_cep";
+            this.dataGridViewTextBoxColumn24.HeaderText = "alu_end_cep";
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "alu_end_log";
+            this.dataGridViewTextBoxColumn25.HeaderText = "alu_end_log";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "alu_end";
+            this.dataGridViewTextBoxColumn26.HeaderText = "alu_end";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "alu_end_nro";
+            this.dataGridViewTextBoxColumn27.HeaderText = "alu_end_nro";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "alu_end_cpl";
+            this.dataGridViewTextBoxColumn28.HeaderText = "alu_end_cpl";
+            this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "alu_end_bai";
+            this.dataGridViewTextBoxColumn29.HeaderText = "alu_end_bai";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "alu_end_cid";
+            this.dataGridViewTextBoxColumn30.HeaderText = "alu_end_cid";
+            this.dataGridViewTextBoxColumn30.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "alu_end_ufe";
+            this.dataGridViewTextBoxColumn31.HeaderText = "alu_end_ufe";
+            this.dataGridViewTextBoxColumn31.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "alu_cur_sgl";
+            this.dataGridViewTextBoxColumn32.HeaderText = "alu_cur_sgl";
+            this.dataGridViewTextBoxColumn32.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.Width = 125;
+            // 
+            // alunosBindingSource
+            // 
+            this.alunosBindingSource.DataMember = "alunos";
+            this.alunosBindingSource.DataSource = this.alunov1DataSet;
+            // 
+            // alunov1DataSet
+            // 
+            this.alunov1DataSet.DataSetName = "alunov1DataSet";
+            this.alunov1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // alunosTableAdapter
+            // 
+            this.alunosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.alunosTableAdapter = this.alunosTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.cursosTableAdapter = null;
+            this.tableAdapterManager.departamentosTableAdapter = null;
+            this.tableAdapterManager.disciplinasTableAdapter = null;
+            this.tableAdapterManager.estadosTableAdapter = null;
+            this.tableAdapterManager.matriculasTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = wfaSCA.alunov1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // cursosBindingSource
+            // 
+            this.cursosBindingSource.DataMember = "cursos";
+            this.cursosBindingSource.DataSource = this.alunov1DataSet;
+            // 
+            // cursosTableAdapter
+            // 
+            this.cursosTableAdapter.ClearBeforeFill = true;
             // 
             // frmAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 665);
+            this.ClientSize = new System.Drawing.Size(1187, 668);
+            this.Controls.Add(this.alunosDataGridView);
+            this.Controls.Add(this.alunosBindingNavigator);
             this.Controls.Add(this.txtSexo);
-            this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox4);
@@ -614,16 +835,17 @@ namespace wfaSCA
             this.Name = "frmAlunos";
             this.Text = "A L U N O S";
             this.Load += new System.EventHandler(this.frmAlunos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingNavigator)).EndInit();
+            this.alunosBindingNavigator.ResumeLayout(false);
+            this.alunosBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunov1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -662,8 +884,29 @@ namespace wfaSCA
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtSexo;
+        
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private alunov1DataSet alunov1DataSet;
         private System.Windows.Forms.BindingSource alunosBindingSource;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private alunov1DataSetTableAdapters.alunosTableAdapter alunosTableAdapter;
+        private alunov1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator alunosBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -675,10 +918,26 @@ namespace wfaSCA
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.TextBox txtSexo;
-        private System.Windows.Forms.BindingSource alunosBindingSource1;
-        private System.Windows.Forms.BindingSource alunosBindingSource2;
-        private System.Windows.Forms.BindingSource alunosBindingSource3;
+        private System.Windows.Forms.ToolStripButton alunosBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView alunosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.BindingSource cursosBindingSource;
+        private alunov1DataSetTableAdapters.cursosTableAdapter cursosTableAdapter;
     }
 }
 

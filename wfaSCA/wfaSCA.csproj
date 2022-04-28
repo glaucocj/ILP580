@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -46,11 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="alunov1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>alunov1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cursosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cursosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dtsDpto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsDpto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAlunos.Designer.cs">
       <DependentUpon>frmAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDpto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDpto.Designer.cs">
+      <DependentUpon>frmDpto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMDISCA.cs">
       <SubType>Form</SubType>
@@ -62,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAlunos.resx">
       <DependentUpon>frmAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDpto.resx">
+      <DependentUpon>frmDpto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMDISCA.resx">
       <DependentUpon>frmMDISCA.cs</DependentUpon>
@@ -76,6 +100,39 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="alunov1DataSet.xsc">
+      <DependentUpon>alunov1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="alunov1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>alunov1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="alunov1DataSet.xss">
+      <DependentUpon>alunov1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cursosDataSet.xsc">
+      <DependentUpon>cursosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cursosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cursosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cursosDataSet.xss">
+      <DependentUpon>cursosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dtsDpto.xsc">
+      <DependentUpon>dtsDpto.xsd</DependentUpon>
+    </None>
+    <None Include="dtsDpto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsDpto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dtsDpto.xss">
+      <DependentUpon>dtsDpto.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

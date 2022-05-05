@@ -108,12 +108,13 @@ namespace wfaSCA
             Form objAlunos = new frmDpto();
             objAlunos.ShowDialog();
         }
-        #endregion
 
-        private void frmMDISCA_Load(object sender, EventArgs e)
+        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form objAlunos = new frmCursos();
+            objAlunos.ShowDialog();
         }
+        #endregion
 
 
     }

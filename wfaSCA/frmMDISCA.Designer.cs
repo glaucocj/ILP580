@@ -130,6 +130,7 @@ namespace wfaSCA
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
             this.cursosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cursosToolStripMenuItem.Text = "Cursos";
+            this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
             // departamentosToolStripMenuItem
             // 
@@ -342,7 +343,7 @@ namespace wfaSCA
             this.Name = "frmMDISCA";
             this.Text = "Sistema de Controle Acadêmico";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmMDISCA_Load);
+            
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);

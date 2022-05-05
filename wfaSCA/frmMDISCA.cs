@@ -91,7 +91,7 @@ namespace wfaSCA
             }
         }
 
-        #region
+        #region Abrir novo formulário
         private void alunosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form objAlunos = new frmAlunos();
@@ -102,7 +102,18 @@ namespace wfaSCA
         {
             this.Close();
         }
+
+        private void disciplinasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form objAlunos = new frmDpto();
+            objAlunos.ShowDialog();
+        }
         #endregion
+
+        private void frmMDISCA_Load(object sender, EventArgs e)
+        {
+
+        }
 
 
     }

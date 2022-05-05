@@ -21,10 +21,48 @@ namespace wfaSCA
 
         private void frmDpto_Load(object sender, EventArgs e)
         {
-            this.bmbDpto = this.BindingContext[dtsDpto1, "departamentos"];
-            this.textBox1.DataBindings.Add("Text", this.dtsDpto1, "departamentos.dep_sgl");
-            this.textBox2.DataBindings.Add("Text", this.dtsDpto1, "departamentos.dep_nom");
-            this.dtsDpto.Fill(dtsDpto1, "departamentos");
+            try
+            {
+                this.bmbDpto = this.BindingContext[dataSetDpto, "departamentos"];
+                this.txtSigla.DataBindings.Add("Text", this.dataSetDpto, "departamentos.dep_sgl");
+                this.txtNome.DataBindings.Add("Text", this.dataSetDpto, "departamentos.dep_nom");
+                this.dataAdapterDpto.Fill(dataSetDpto, "departamentos");
+            }
+            catch (Exception erroAplicacao)
+            {
+                MessageBox.Show(this, erroAplicacao.Message,"Erro...");
+            }
+            finally
+            {
+                if ( cnnDpto.State == ConnectionState.Open) cnnDpto.Close();
+            }
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            this.bmbDpto.Position--;
+        }
+
+        private void btnProximo_Click(object sender, EventArgs e)
+        {
+            this.bmbDpto.Position++;
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            this.bmbDpto.AddNew();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            this.bmbDpto.EndCurrentEdit();
+            this.dataAdapterDpto.Update(this.dataSetDpto);
+            this.dataSetDpto.AcceptChanges();
+        }
+
+        private void Remover_Click(object sender, EventArgs e)
+        {
+            this.bmbDpto.RemoveAt(bmbDpto.Position);
         }
     }
 }

@@ -143,6 +143,7 @@ namespace wfaSCA
             this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
             this.estadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.estadosToolStripMenuItem.Text = "Estados";
+            this.estadosToolStripMenuItem.Click += new System.EventHandler(this.estadosToolStripMenuItem_Click);
             // 
             // secretariaToolStripMenuItem
             // 
@@ -156,13 +157,13 @@ namespace wfaSCA
             // matrículaToolStripMenuItem
             // 
             this.matrículaToolStripMenuItem.Name = "matrículaToolStripMenuItem";
-            this.matrículaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.matrículaToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.matrículaToolStripMenuItem.Text = "Matrícula";
             // 
             // históricoToolStripMenuItem
             // 
             this.históricoToolStripMenuItem.Name = "históricoToolStripMenuItem";
-            this.históricoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.históricoToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.históricoToolStripMenuItem.Text = "Histórico";
             // 
             // docenteToolStripMenuItem
@@ -343,7 +344,6 @@ namespace wfaSCA
             this.Name = "frmMDISCA";
             this.Text = "Sistema de Controle Acadêmico";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);

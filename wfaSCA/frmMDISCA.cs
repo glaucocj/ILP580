@@ -105,14 +105,22 @@ namespace wfaSCA
 
         private void disciplinasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form objAlunos = new frmDpto();
-            objAlunos.ShowDialog();
+            Form objDpto = new frmDpto();
+            objDpto.ShowDialog();
         }
 
         private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form objAlunos = new frmCursos();
-            objAlunos.ShowDialog();
+            Form objCursos = new frmCursos();
+            objCursos.ShowDialog();
+        }
+
+        private void estadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                Form objEstados = new frmEstados();
+                objEstados.ShowDialog();
+            }
         }
         #endregion
 
